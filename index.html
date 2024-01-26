@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página html desafio Dio</title>
+  <style>
+    /* Inicialmente, oculte os itens da lista */
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      display: none;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    /* Remova o estilo sublinhado e mude a cor para preto do título clicável */
+    h3 {
+      cursor: pointer;
+      color: black;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Primeiros Passos com HTML</h1>
+    <hr>
+    <section>
+      <h2>Entendendo Comunicação Client x Server</h2>
+      <section>
+        <!-- Adicione um ID para o título da história -->
+        <h3 onclick="toggleLista('historia')">História da web</h3>
+        <ul id="historia-list">
+          <li>
+            <h4>Primeiros computadores</h4>
+          </li>
+          <li>
+            <h4>Como surgiu a internet?</h4>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 onclick="toggleLista('clientes')">O que são clientes?</h3>
+        <ul id="clientes-list">
+          <li>
+            <h4>Cliente no Linguajar Web</h4>
+          </li>
+          <li>
+            <h4>Navegadores</h4>
+          </li>
+          <li>
+            <h4>Aplicações Web</h4>
+          </li>
+          <li>
+            <h4>Dispositivos Móveis</h4>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 onclick="toggleLista('servers')">O que são servers?</h3>
+        <ul id="servers-list">
+          <li>
+            <h4>Sobre servidores</h4>
+          </li>
+          <li>
+            <h4>Hardwares e Softwares em Servidores</h4>
+          </li>
+          <li>
+            <h4>Tipos de Servidores</h4>
+          </li>
+          <li>
+            <h4>Hospedagem de Sites</h4>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </header>
+
+  <main>
+
+  </main>
+
+  <!-- Adicione um script JavaScript para manipular a exibição da lista -->
+  <script>
+    function toggleLista(sectionId) {
+      var lista = document.getElementById(sectionId + '-list');
+      var items = lista.querySelectorAll('li');
+
+      items.forEach(function (item) {
+        item.style.display = (item.style.display === 'none' || item.style.display === '') ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+
+</html>
