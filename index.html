@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Página html desafio Dio</title>
   <style>
-    /* Inicialmente, oculte os itens da lista */
+  *{
+    text-align: justify;
+  }
     ul {
       list-style-type: none;
       padding: 0;
@@ -17,6 +19,10 @@
       display: none;
     }
 
+    ul.visible li {
+      display: block;
+    }
+
     section {
       display: flex;
       flex-direction: column;
@@ -24,7 +30,11 @@
       margin-bottom: 20px;
     }
 
-    /* Remova o estilo sublinhado e mude a cor para preto do título clicável */
+    section h3 {
+      margin-bottom: 10px;
+      /* Ajuste o espaçamento entre os h3 */
+    }
+
     h3 {
       cursor: pointer;
       color: black;
@@ -34,20 +44,19 @@
 </head>
 
 <body>
-  <header>
+  <header id="home">
     <h1>Primeiros Passos com HTML</h1>
     <hr>
     <section>
       <h2>Entendendo Comunicação Client x Server</h2>
       <section>
-        <!-- Adicione um ID para o título da história -->
         <h3 onclick="toggleLista('historia')">História da web</h3>
         <ul id="historia-list">
           <li>
-            <h4>Primeiros computadores</h4>
+            <h4><a href="#primeiros-computadores">Primeiros computadores</a></h4>
           </li>
           <li>
-            <h4>Como surgiu a internet?</h4>
+            <h4><a href="#surgimento-internet">Como surgiu a internet?</a></h4>
           </li>
         </ul>
       </section>
@@ -56,16 +65,16 @@
         <h3 onclick="toggleLista('clientes')">O que são clientes?</h3>
         <ul id="clientes-list">
           <li>
-            <h4>Cliente no Linguajar Web</h4>
+            <h4><a href="#cliente-web">Cliente no Linguajar Web</a></h4>
           </li>
           <li>
-            <h4>Navegadores</h4>
+            <h4><a href="#navegadores">Navegadores</a></h4>
           </li>
           <li>
-            <h4>Aplicações Web</h4>
+            <h4><a href="#aplicacao-web">Aplicações Web</a></h4>
           </li>
           <li>
-            <h4>Dispositivos Móveis</h4>
+            <h4><a href="#dispositivo-movel">Dispositivos Móveis</a></h4>
           </li>
         </ul>
       </section>
@@ -74,33 +83,351 @@
         <h3 onclick="toggleLista('servers')">O que são servers?</h3>
         <ul id="servers-list">
           <li>
-            <h4>Sobre servidores</h4>
+            <h4><a href="#servidores">Sobre servidores</a></h4>
           </li>
           <li>
-            <h4>Hardwares e Softwares em Servidores</h4>
+            <h4><a href="#hardware-software">Hardwares e Softwares em Servidores</a></h4>
           </li>
           <li>
-            <h4>Tipos de Servidores</h4>
+            <h4><a href="#tipo-servidor">Tipos de Servidores</a></h4>
           </li>
           <li>
-            <h4>Hospedagem de Sites</h4>
+            <h4><a href="#hospedagem-site">Hospedagem de Sites</a></h4>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 onclick="toggleLista('linguagens')">Linguagens de programação</h3>
+        <ul id="linguagens-list">
+          <li>
+            <h4><a href="#definicao">Definição</a></h4>
+          </li>
+          <li>
+            <h4><a href="#lado-servidor">Server-Side</a></h4>
+          </li>
+          <li>
+            <h4><a href="#lado-cliente">Client-Side</a></h4>
+          </li>
+          <li>
+            <h4><a href="#html-marcacao">HTML não é Linguagem de Programação</a></h4>
           </li>
         </ul>
       </section>
     </section>
+
+    <section>
+      <h2>Introdução ao HTML na Prática</h2>
+      <ul class="visible">
+        <li>
+          <h3><a href="#estrutura-html">Estrutura Básica do HTML</a></h3>
+        </li>
+        <li>
+          <h3><a href="#tag-html">Tags html</a></h3>
+        </li>
+        <li>
+          <h3><a href="#atributo-tag">Atributos das tags</a></h3>
+        </li>
+        <li>
+          <h3><a href="#texto-html">Textos</a></h3>
+        </li>
+        <li>
+          <h3><a href="#listas-html">Listas Ordenadas e Não Ordenadas</a></h3>
+        </li>
+        <li>
+          <h3><a href="#links-html">Links</a></h3>
+        </li>
+      </ul>
+    </section>
   </header>
 
   <main>
+    <section>
+      <h2>História da web</h2>
 
+      <h3 id="primeiros-computadores">Primeiros computadores</h3>
+      <h5><a href="#home">voltar</a></h5>
+      <h4>Primeira geração</h4>
+      <h5>MARK I</h5>
+      <p>
+        Também conhecido como Harvard Mark I foi o primeiro computador eletromecânico construído em 1944 por Howard Aiken e sua equipe em Harvard. Sua estrutura de 16 metros de comprimento por 2,5 de altura era composta por cerca de 800.000 peças. A programação do Mark I era realizada através de cartões perfurados e o uso desse computador se deu em cálculos de trajetórias balísticas, tabelas de artilharia entre outros.
+      </p>
+
+      <h5>COLOSSUS</h5>
+      <p>
+        Desenvolvido durante a Segunda Guerra Mundial na Inglaterra, foi o primeiro computador digital eletrônico. Foi projetado por Tommy Flowers e construído na Bletchley Park em 1943. Sua estrutura contava com válvulas termiônicas (tubos de vácuo)e sua arquitetura seguia em paralelo, o que tornava possível a operação de vários canais ao mesmo tempo. Sua aplicação foi decifrar mensagens codificadas alemãs.
+      </p>
+
+      <h5>ENIAC</h5>
+      <p>
+        Projetado por John W. Mauchly e J. Presper Eckert, foi o primeiro computador eletrônico de grande porte e totalmente digital. Sua estrutura comporta aproximadamente mais de 17.000 válvulas termiônicas para realizar cálculos. Seu uso se deu em cálculos balísticos inicialmente, porém também foi utilizado em simulações de explosões nucleares.
+      </p>
+
+      <h4>segunda geração</h4>
+      <h5>IBM 7000 series</h5>
+      <p>
+        Os computadores desta série utilizavam válvulas termiônicas que posteriormente, foram substituidas por transistores. Suas memórias contava com fitas magnéticas e discos e sua programação era realizada em linguagem de montagem e linguagens de alto nível. Foram utilizados em cálculos científicos, como também em processamento de transações comerciais e em manipulação de grandes volumes de dados.
+      </p>
+
+      <h5>UNIVAC 1107</h5>
+      <p>
+        Desenvolvido na década de 1960 pela Universal Automatic Computer, era um mainframe de grande porte. Em sua arquitetura, constava transistores e circuitos integrados. Possuia uma forma de memória RAM, composta por núcleos magnéticos e tinha a possibilidade de ser equipado com diversos dispositivos de armazenamento. Sua programação se dava em linguagem de montagem e suportava linguagens de alto nível. O UNIVAC 1107 foi utilizado em cálculos científicos, por exemplo, até em processamento de dados comercias e simulações.
+      </p>
+
+      <h5>CDC 1604</h5>
+      <p>
+        A Control Data Corporation (CDC) lançou em 1960 o computador CDC 1604 que era capaz de realizar 100.00 por segundos. A sua arquitetura era composta por transistores de junção e sua memória era formada por núcleos magnéticos. Era programado em linguagem de montagem e suportava linguagens de alto nível. Sua aplicação se deu em pesquisa científica e cálculos complexos, como processamento de dados comerciais.
+      </p>
+
+      <h4>terceira geração</h4>
+      <h5>IBM SYSTEM/360</h5>
+      <p>
+        O IBM System/360 foi uma linha de mainframes, sendo o primeiro sistema de computadores a utilizar a arquitetura modular, o que permitiu que diferentes sistemas atualizassem sem a necessidade de substituição de hardwares e reescrita de softwares. Lançado em 1964, oferecia sistemas avançados de entrada e saída de dados, assim como, um sistema operacional compatível entre toda a linha de modelos(OS/360). Foi utilizado em áreas como, transações financeiras, científica, governamental e empresarial.
+      </p>
+
+      <h5>CDC 6600</h5>
+      <p>
+        Desenvolvido em 1964, o CDC 6600 se baseava na arquitetura de pipeline,o que lhe permitia a execução de várias instruções simultaneamente. Projetado por Seymour Cray, o CDC contava com memória rápida chamada “core memory”, capacidade de processamento que batia a casa dos 3 milhões de instruções por segundos, além de poder ser conectado a periféricos, como disco rígido, impressoras etc. Seu uso se deu em cálculos de simulações de física nuclear, meteorologia e análises estruturais.
+      </p>
+
+      <h5>DEC PDP-8</h5>
+      <p>
+        Introduzido em 1965 pela Digital Equipment Corporation (DEC), o PDP-8 possuía uma arquitetura simplificada, uma memória com capacidade de 4 kb, além de várias opções de entrada e saída, como unidades de fita magnética, leitores de fita perfurada etc. O DEC é considerado um dos primeiros mini computadores, com sua programação sendo realizada em linguagem de montagem, teve seu uso em laboratórios de pesquisa e em aplicações industriais
+      </p>
+
+      <h5>HONEYWELL H200 SERIES</h5>
+      <p>
+        Lançada nos anos 1960, a série Honeywell H200 tinham sua arquitetura de processamento centralizada, módulos de memória, para armazenamento de dados temporários , interfaces para entrada e saída de dados, permitindo a integração com periféricos . Contando com sistemas operacionais específicos, foi empregado em processamento de transações comerciais, controle de processos industriais etc.
+      </p>
+
+      <h4>Quarta geração</h4>
+      <h5>ALTAIR 8800</h5>
+      <p>
+        Lançado em 1975, Altair 8800 foi um dos primeiros micro computadores disponíveis comercialmente. Projetado pela MITS, contava com um processador baseado no Intel 8080, cuja poder de processamento era de 2MHz. Sua memória era adquirida pelos próprios usuários, já que inicialmente não existia uma memória RAM padrão. No que diz respeito ao armazenamento, o Altair não possuía discos rígidos e os dados dos processos eram armazenados em fitas cassete ou em placas de memória ROM. Não possuindo interface gráfica e nem sistema operacional, a interação com ele era realizada através de interruptores na frente do gabinete. Na sua programação, o Altair recebia instruções na linguagem de máquina ou linguagens de programação como Assembly. Seu uso foi de grande importância, pois se deu nas esferas da educação, desenvolvimento de softwares entre outros, o que possibilitou uma maior expansão da comunidade de desenvolvimento.
+      </p>
+
+      <h5>IBM 4341</h5>
+      <p>
+        Introduzido em 1979 como parte da Série/370, o IBM 4341 era um mainframe que podia possuir até quatro processadores, denominados VF(flutuante Vector Facility). Possuia uma RAM de 8 megabytes, além de suportar diversas unidades de discos, o que garantia um maior armazenamento de dados. Com a capacidade de operar diferentes sistemas operacionais e a conexão com periféricos de entrada e saída de dados, o IBM era desenvolvido para operar cargas de trabalho intensivas, o que permitiu seu uso em processamento de transações, processamento de dados científicos, Sistemas de Gerenciamento de Banco de Dados etc.
+      </p>
+
+      <h5>Apple II</h5>
+      <p>
+        Desenvolvido por Steve Wozniak e Steve Jobs, o Apple II foi o primeiro computador pré-fabricado a ter sua produção em larga escala. Com uma interface gráfica, capacidade de exibição de cores, gráficos primitivos, porém avançados para e época, um teclado e suporte a monitor, ainda contava com a linguagem Basic já instalada no ROM, o que o tornava fácil a interação e o desenvolvimento de programas. O Apple II foi utilizado na educação, setores empresariais, desenvolvimento de softwares, design gráfico, home Computing etc.
+      </p>
+
+      <h5>DEC VAX-11/780</h5>
+      <p>
+        Introduzido em 1977, o VAX-11/780 da Digital Equipment Corporation (DEC) foi um mainframe que possuía em sua arquitetura conjunto de instruções complexas (CISC) e endereçamento virtual. Em suas especificações, contava com suporte a várias linguagens de programação, e podia gerar aproximadamente 4 bilhões de endereços em sua memória, o que possibilitava gerenciar e executar conjuntos de dados e programas mais extensos. Com seus sistema operacional VAX/VMS (Virtual Memory System), desenvolvido para se adequar a arquitetura do VAX e potencializar as suas capacidades de processamento, o seu uso foi grande em esferas como o desenvolvimento de softwares, Aplicações Científicas, Gerenciamento de Banco de Dados, Servidores e Redes etc.
+      </p>
+
+      <h4>Quinta geração</h4>
+      <p>
+        A quinta geração de computadores (1980-presente) é caracterizada por avanços em tecnologias de realidade aumentada, alto processamento de dados, IAS entre outras.
+
+        A seguir são apresentados alguns exemplos de tecnologias da quinta geração.
+      </p>
+      <h5>SUPERCOMPUTADORES PARALELOS</h5>
+      <p>
+        Supercomputadores paralelos, como o Cray T90 e o IBM Blue Gene, são projetados com o foco em múltiplas tarefas simultaneamente. A divisão de tarefas se dar em tarefas paralelas, junto com o tipo de paralelismo, que pode ser: Paralelismo de Dados – com os dados sendo divididos entre os processadores, Paralelismo de Tarefa- com os diferentes processadores em diferentes partes de tarefas globais. E a sua memória possui a possibilidade de ser : compartilhada- onde todos os processadores possuem acesso a mesma memória, com sistemas de sincronização e Distribuída- com qual cada processador tem acesso apenas a sua memória e executa a comunicação com os demais através de mensagens.
+      </p>
+
+      <h5>INTELIGÊNCIA ARTIFICIAL (IA)</h5>
+      <p>
+        A Inteligência Artificial (IA) refere-se à capacidade de máquinas executarem tarefas, até então, realizadas apenas pela capacidade cognitiva humana. Existem diferentes tipos de IAS, IA fraca – cuja capacidade de interação é limitada, devido ao desenvolvimento para uso específico e IA forte – cuja capacidade de realizar tarefas se dar no âmbito humano, sendo capaz de executar qualquer tarefa humana e até mesmo superar a inteligência humana.
+      </p>
+
+      <h5>DISPOSITIVOS DE COMPUTAÇÃO MÓVEL</h5>
+      <p>
+        Os dispositivos de computação móvel, como smartphones e tablets, tiveram um crescimento gigantesco com o desenvolvimento do iPhone, lançado pela Apple em 2007. Com sua interface gráfica intuitiva, capacidade de multitarefas, design compacto, com características de hardwares e softwares que superam alguns grandes computadores de épocas passadas, esses dispositivos evoluem em velocidade surpreendente, transformando a interação humana com a tecnologia, possibilitando não apenas acesso e consumo rápido a informação, como também a capacidade de interagir com o mundo todo.
+      </p>
+
+      <h3 id="surgimento-internet">COMO SURGIU A INTERNET?</h3>
+      
+      <h5><a href="#home">voltar</a></h5>
+
+      <h4>ORIGENS E ARPANET (1960S)</h4>
+      <p>
+        A internet teve sua origem no projeto do Departamento de Defesa dos EUA na década de 1960. Em meio a guerra fria, e o receio de perda de comunicação, o objetivo do projeto intitulado ARPANET era criar uma estrutura capaz de suportar falhas em caso de ataques e preservar informações. A primeira mensagem através dessa estrutura foi realizado em 1969, entre UCLA e o Instituto de Pesquisa de Stanford.
+      </p>
+
+      <h4>DESENVOLVIMENTO DE PROTOCOLOS (1970S)</h4>
+      <p>
+        Com o desenvolvimento de protocolos, o envio de informações se tornou mais padronizado e confiável. Alguns dos principais protocolos surgidos nessa época foi o TCP/IP (Transmission Control Protocol/Internet Protocol), que garantia a entrega confiável dos dados, os dividindo em pacotes que seriam reorganizados no destino, assim como a seleção e a condução desses pacotes até os endereços de destino.
+      </p>
+
+      <h4>EXPANSÃO INTERNACIONAL (1980S)</h4>
+      <p>
+        Durante a década de 1980, a ARPANET continuou a expandir-se, criando conexões com países como Canadá, Noruega e Reino Unido. Em 1983, o TCP/IP, protocolo de comunicação, foi adotado como padrão, o que tornou possível a integração entre diferentes redes, potencializando o crescimento global do que viria a ser denominada internet. E em 1988, a criação da rede acadêmica mundial (wan) impulsionou ainda mais a colaboração entre países na rede, conectando instituições de pesquisa e acadêmica ao redor do mundo.
+      </p>
+
+      <h4>EMERGÊNCIA DA WORLD WIDE WEB (1990S)</h4>
+      <p>
+        Com um grande crescimento de redes e variações de comunicação, houve a necessidade de uma maior padronização da web, o que resultou na criação, por Tim Berners-Lee, do Protocolo de Transferência de Hipertexto (HTTP) e a linguagem de marcação HTML. Diante de apenas um protocolo de envio de dados e uma linguagem para escrever essas informações, a web se tornava cada vez mais integrada e compatível. Com o surgimento de navegadores, como o mosaico em 1993, que contava com uma interface gráfica amigável e o Netscape Navigator com a seus recursos de imagens incorporadas e layouts de página, a internet se tornava mais acessível as grandes massas.
+      </p>
+
+      <h4>POPULARIZAÇÃO E ACESSO PÚBLICO (1990S EM DIANTE)</h4>
+      <p>
+        Com o surgimento de provedores de internet, como America Online (AOL), Prodigy e Compuserve, o uso da internet cresceu rapidamente, abrangendo áreas como comunicação, comércio, entretenimento e educação. Com cada vez mais usuários da web, a criação de novas tecnologias, como o aumento de banda larga, o uso de fibra óptica, um grande número de servidores, a criação de camadas de segurança na rede entre outros, tornava a internet mais democrática, rápida e segura, o que possibilitou o surgimento de lojas onlines, serviços de banco, bancos totalmente digitais, a criação de plataformas de vídeos, como o YouTube em 2005 e streamings. Hoje a internet é a forma mais rápida de comunicação, conectando diversos países e integrando diversas e cada vez mais novas tecnologias.
+      </p>
+    </section>
+    <h2>O QUE SÃO CLIENTES</h2>
+
+    <h3 id="cliente-web">CLIENTE NO LINGUAJAR WEB</h3>
+    
+    <h5><a href="#home">voltar</a></h5>
+    
+    <p>
+      No contexto web, um cliente é aquele que solicita serviços ou recursos disponibilizados em um servidor. Esses clientes são dispositivos ou softwares e os servidores são computadores de grande porte, que operam intenso volume de dados.
+    </p>
+
+    <h3 id="navegadores">NAVEGADORES</h3>
+    <p>
+      Navegadores ou browsers são programas desenvolvidos para solicitar, acessar e entregar recursos, informações, serviços aos usuários por meio de protocolos web. Esses softwares possui interfaces gráficas próprias, assim como, são capazes de armazenamento de caches que melhora a experiência do usuário, uma vez que, quando as páginas que estão sendo acessadas não tem variação de informações, como layout, dados etc, não serão recarregadas pois os navegadores armazenam esses informações. Alem disso, permitem comunicação assíncrona, o que torna possível a atualização de apenas partes específicas de páginas web, sem necessidade de recarrega-las por completo.
+    </p>
+
+    <h3 id="aplicacao-web">APLICAÇÕES WEB</h3>
+    <p>
+      Desenvolvidos para serem executados no lado do cliente, ou seja nos navegadores web, as aplicações são programas que tem sua hospedagem em servidores. Utilizam as tecnologias web, HTML, CSS e JAVASCRIPT e a forma de os acessarem segue o mesmos princípios de sites web, com protocolos, solicitação/processamento no servidor, interpretação e montagem no navegador etc.
+    </p>
+
+    <h3 id="dispositivo-movel">DISPOSITIVOS MÓVEIS</h3>
+    <p>
+      Caracteriza-se como dispositivos móveis, os aparelhos que realizam, por exemplo, o acesso a internet, execução de programas variados, uso de GPS, acesso a e-mails, recursos de multimídia etc. Nesse cenário, os smartphones e os tablets são vistos em primeiro lugar com tais dispositivos, porém não são os únicos, na verdade com o avanço da tecnologia, cada vez mais é visto o surgimento de novos dispositivos móveis , como relógios inteligentes, dispositivos de realidade aumentada etc.
+    </p>
+    <section>
+
+      <section>
+        <h2>O QUE SÃO SERVERS</h2>
+
+        <h3 id="servidores">SOBRE SERVIDORES</h3>
+        <h5><a href="#home">voltar</a></h5>
+        
+        <p>
+          Com hardwares robustos, como processador, memória RAM, armazenamento, placas de rede, essas máquinas são utilizados para o fornecimento de dados e demais recursos para dispositivos chamados clientes, por meio de uma rede, geralmente a internet. Existem vários tipos de servidores, entre eles, servidores de dados que armazenam e processam esses dados, servidores web que fornece as páginas web com seus conteúdos e servidores de E-mail que gerenciam o envio, recebimento, armazenamento de e-mails.
+        </p>
+
+        <h3 id="hardware-software">HARDWARES E SOFTWARES EM SERVIDORES</h3>
+        <p>
+          Como um servidor é uma máquina de grande porte, utilizado para lidar com várias solicitações simultâneas, ele conta com vários componentes avançados de processamento e armazenamento de memória. Alguns dos componentes mais principais dos servidores são os processadores, que nesse caso, pode ser apenas um ou vários em um único servidor, que operam muitas vezes em paralelo. Em relação a memória RAM, eles as possuem de acordo com a aplicação que estam sendo empregados. Em casos de hospedagem de sites, a memória RAM pode ser mais modesta em relação aos grandes data centers que possui realmente uma grande quantidade de memória RAM. No armazenamento, os servidores se destacam pela capacidade de armazenamento, que novamente, pode ser mais modesta ou alcançar dezenas de terabytes. A placa- mãe faz a conexão entre todos os componentes do servidor e geralmente tem suporte a vários processadores, grande capacidade de ram e várias portas de expansão. Já na placas de rede, alguns servidores são equipados com múltiplas placas para garantir e melhorar o desempenho. Essas são apenas alguns componentes do hardware dos servidores.<br><br>
+          Entrando no quesito de softwares, os servidores não são tão diferentes dos computadores pessoais, que possuem sistemas operacionais, juntos com outros programas. Porém, como processam grande quantidade de dados, eles possuem softwares específicos para isso. Como por exemplo, alguns dos sistemas operacionais que são utilizados nos servidores são Windows Server, Linux (distribuições como Ubuntu Server, CentOS, Red Hat Enterprise Linux). Os programas que seram executados pelo sistema operacional vai depender de qual é a aplicação em que o servidor está sendo utilizado, como por exemplo, em servidores web, os softwares para gerenciar solicitações http são Apache HTTP Server, Nginx entre outros. Já em relação a banco de dados, alguns programas são MySQL, PostgreSQL.
+        </p>
+
+        <h3 id="tipo-servidor">TIPOS DE SERVIDORES</h3>
+        <p>
+          Como a rede abriga diferentes tipos de dados e informações, é nescessário a existência de diferentes servidores especializados em um determinado ramo da web. A seguir é apresentado os dez servidores mais comuns.
+
+          <br><br><strong>1. Servidor de web</strong>
+
+
+          São os que servem páginas HTML, arquivos, imagens, aplicações por meio dos navegadores web, os clientes. A comunicação entre cliente/servidor se dar através de protocolos de web, como http e a sua versão criptografada https. Em relação aos softwares utilizados em servidores web, existem vários, como por exemplo, Apache, Nginx, Microsoft IIS ou LiteSpeed, que são utilizados no gerenciamento de solicitações dos conteúdos.
+
+          <br><br><strong>2. Servidor de banco de dados</strong>
+
+          São os que são responsáveis pelo armazenamento, gerenciamento e recuperação de dados. Seus softwares são especializados em estruturação e manipulação de dados, como por exemplo, MySQL, PostgreSQL e Microsoft SQL Server. A interação com o banco de dados é realizada por meios de protocolos como SQL (Structured Query Language) e a comunicação pode ser realizada de forma remota.
+
+          <br><br><strong>3. Servidores de arquivos</strong>
+
+          São os que disponibilizam arquivos, por meio de armazenamento centralizado. São exemplos de arquivos, documentos de texto, imagens, vídeos, programas executáveis, planilhas atc. A diferença de conteúdos em relação aos servidores de banco de dados é que, nos bancos de dados as informações são estruturadas e organizadas em tabelas. Seus softwares definem e trabalham a organização e armazenamento de dados, como exemplos, NTFS (Windows), ext4 (Linux) e HFS+ (macOS). E a comunicação entre servidor e cliente se dar através de protocolos, como SMB (Server Message Block), NFS (Network File System) ou FTP (File Transfer Protocol).
+        </p>
+
+        <h3 id="hospedagem-site">HOSPEDAGEM DE SITES</h3>
+        <p>
+          Se refere ao serviço de alocação de web sites em um servidor, que pode ser compartilhado com outros sites ou dedicado somente a um, para eventual acesso dos usuários. A hospedagem é realizada através de algumas etapas, entre elas : escolha de um provedor ; registro de domínio; escolha de plano de hospedagem; configuração de conta etc. O envio dos arquivos do site se dar através da utilização do cliente FTP (File Transfer Protocol) e pode ser utilizado diferentes ferramentas, como o FileZilla, Cyberduck ou o próprio gerenciador de arquivos fornecido pelo provedor.
+        </p>
+      </section>
+
+      <section>
+        <h2>LINGUAGENS DE PROGRAMAÇÃO</h2>
+
+        <h3 id="definicao">DEFINIÇÃO</h3>
+        
+        <h5><a href="#home">voltar</a></h5>
+        
+        <p>
+          Conjunto de instruções cuja hierarquia, organização e lógica seguem regras que buscam o desenvolvimento de programas de computador para uma determinada finalidade.
+        </p>
+
+        <h3 id="lado-servidor">SERVER-SIDE</h3>
+        <p>
+          Executadas no lado do servidor, as linguagens Server-Side, são utilizadas para operações no banco de dados, autenticação, executar lógica de negócios etc. Alguns exemplos mais populares são javascript, PHP, Ruby, Python entre outras.
+        </p>
+
+        <h3 id="lado-cliente">CLIENT-SIDE</h3>
+        <p>
+          Do lado do cliente, as linguagens de programação como javascript são utilizadas para dar dinamismo as páginas HTML, validação de formulários, requisições assíncronas, manipulação de eventos etc.
+        </p>
+
+        <h3 id="html-marcacao">HTML NÃO É LINGUAGEM DE PROGRAMAÇÃO</h3>
+        <p>
+          Apesar de ter linguagem no seu nome, o HTML é um conjunto de regras de marcação de texto, utilizado para estruturar as páginas web, possuindo marcadores denominados tags html que permiti por exemplo, a estrutura de textos, imagens, vídeos, que junto com o CSS, responsável pela formatação adequada das páginas e aplicações disponibilizados na rede e o javascript forma a grande parte de tudo que é disponibilizado pela internet.
+        </p>
+      </section>
+
+      <section>
+        <h2 id="estrutura-html">ESTRUTURA BÁSICA DO HTML</h2>
+        
+        <h5><a href="#home">voltar</a></h5>
+        
+        <p>
+          Utilizado para estruturar páginas e aplicações web, o HTML segue a estrutura padrão a seguir:
+          <br><br>html<br>head<br>/head<br>body<br>/body<br>/html<br><br> Onde o campo aberto pelas tags head contém informações sobre a página, o campo body contém o conteúdo de fato que será exibido no navegador, e toda está estrutura está contida dentro da TAG html, que indica que o conteúdo dentro dela é do tipo HTML.
+        </p>
+
+        <h2 id="tag-html">TAGS HTML</h2>
+        <p>
+          Geralmente apresentadas em pares como <tag></tag>, as tags presentes no HTML são marcadores, que possibilitam a inserção de elementos como diferentes níveis de cabeçalhos até o h6, assim como parágrafos p, imagens img, vídeos vídeo, entre muitos outros.
+        </p>
+
+        <h2 id="atributo-tag">ATRIBUTOS DAS TAGS</h2>
+        <p>
+          São utilizados para adicionar informações específicas nas tags, personalizando-as de acordo com a finalidade do projeto. Alguns exemplos de atributos são:
+          <br><br><strong><i>Class</i></strong>- define uma classe ou mais para o elemento, muitos vezes sendo utilizada como identificadores para uma determinada finalidade;
+          <br><br><strong><i>Id</i></strong>- define um identificador único, que só pode ser utilizado uma vez na página HTML;
+          <br><br><strong><i>Style</i></strong>– permite a aplicação de estilos nos elementos diretamente dentro do HTML;
+          <br><br><strong><i>Width e height</i></strong>- define a largura e a altura dos elementos;
+          <br><br><strong><i>Src</i></strong>- define o caminho para imagens, scripts, URLs, CSS etc.
+        </p>
+
+        <h2 id="texto-html">TEXTOS</h2>
+        <p>
+          No HTML existe tags específicas para textos. Alguns exemplos incluem:
+          <br><strong><i>h1 a h6</i></strong>- que define diferentes níveis de cabeçalhos, com seus títulos, subtítulos;
+          <br><strong><i>p</i></strong>- para parágrafos;
+          <br><strong><i>blockquote</i></strong> para citações;
+          <br><strong><i>strong</i></strong>- para deixar o texto em negrito;
+          <br><strong><i>u</i></strong>- para deixar o texto sublinhado – preferível a utilização de CSS;
+          <br><strong><i>i</i></strong>- para deixar o texto em itálico;
+          <br><strong><i>mark</i></strong>- para marcar alguma parte do texto, semelhante aos marca-textos;
+          <br><strong><i>sup</i></strong>- para posicionar elementos em posição sobreescrita;
+        </p>
+
+        <h2 id="listas-html">LISTAS ORDENADAS E NÃO ORDENADAS</h2>
+        <p>
+          Utilizadas comumente para estruturação e organização de elementos em listas, as listas ordenadas como o próprio nome sugere é utilizada quando é importante a ordem dos elementos, seguindo uma numeração alfabética ou simplesmente com números e a sua estrutura consiste em : <br>ol<br>li.../li<br>/ol<br>
+          Onde a tag ol indica que se trata de uma lista ordenada, e a li indica o elemento da lista.<br>
+
+          Já as listas não ordenadas tem seu uso quando a ordem que aparecem os elementos não é relevante. Sua estrutura é a seguinte:
+          <br>ul<br>li../li<br>/ul<br>
+          Em que a tag ul implica uma lista não ordenada e li seu elemento.
+        </p>
+
+        <h2 id="links-html">LINKS</h2>
+        <p>
+          São os que fazem as páginas web serem navegáveis. No HTML a tag para linkar a outras páginas, conteúdos, vídeos, imagens etc é <strong>a</strong>, que possuem alguns atributos próprios como :
+            <br><strong>target</strong> = “_self” - que carrega o conteúdo na própria página;
+            <br><strong>target</strong> = “_blank” – que abre o conteúdo linkado em outra aba do navegador.
+        </p>
+      </section>
+    </section>
   </main>
 
-  <!-- Adicione um script JavaScript para manipular a exibição da lista -->
   <script>
     function toggleLista(sectionId) {
       var lista = document.getElementById(sectionId + '-list');
       var items = lista.querySelectorAll('li');
 
-      items.forEach(function (item) {
+      items.forEach(function(item) {
         item.style.display = (item.style.display === 'none' || item.style.display === '') ? 'block' : 'none';
       });
     }
